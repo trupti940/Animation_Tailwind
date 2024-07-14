@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Animation</title>
+    <script src="https://kit.fontawesome.com/8b6c95fcc2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .spin-animation {
+            animation: spin 10s linear infinite;
+        }
+
+        @keyframes slide-in {
+            0% { transform: translateX(-100%); color: white; }
+            50% { color: grey; }
+            100% { transform: translateX(calc(100vw - 1200px)); color: black; }
+        }
+
+        .slide-in {
+            animation: slide-in 3s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen bg-yellow-400 m-0">
+    <div class="relative w-72 h-72">
+        <div class="absolute inset-0 transform translate-x-1/2 translate-y-1/2 spin-animation">
+            <i class="absolute text-2xl fa-brands fa-facebook" style="top: 0; left: 50%; transform: translateX(-50%);"></i>
+            <i class="absolute text-2xl fa-brands fa-twitter" style="top: 14.64%; left: 85.36%; transform: translate(-50%, -50%);"></i>
+            <i class="absolute text-2xl fa-brands fa-youtube" style="top: 50%; left: 100%; transform: translate(-50%, -50%);"></i>
+            <i class="absolute text-2xl fa-solid fa-house" style="top: 85.36%; left: 85.36%; transform: translate(-50%, -50%);"></i>
+            <i class="absolute text-2xl fa-solid fa-camera" style="top: 100%; left: 50%; transform: translate(-50%, -50%);"></i>
+            <i class="absolute text-2xl fa-solid fa-clock" style="top: 85.36%; left: 14.64%; transform: translate(-50%, -50%);"></i>
+            <i class="absolute text-2xl fa-solid fa-phone" style="top: 50%; left: 0; transform: translate(-50%, -50%);"></i>
+            <i class="absolute text-2xl fa-regular fa-lightbulb" style="top: 14.64%; left: 14.64%; transform: translate(-50%, -50%);"></i>
+            <i class="absolute text-2xl fa-solid fa-laptop" style="top: 0; left: 50%; transform: translateX(-50%);"></i>
+        </div>
+    </div>
+    <div class="absolute left-0 text-2xl font-bold slide-in">
+        Pay bills instantly
+    </div>
+</body>
+</html>
