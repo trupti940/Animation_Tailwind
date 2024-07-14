@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Border Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            margin: 0;
+        }
+
+        .neon-border {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            background-color: black;
+            border: 1px magenta;
+            box-shadow:  10px 20px 50px yellow, 10px 10px 50px magenta;
+            animation: expandGlow 1s infinite;
+        }
+
+        @keyframes expandGlow {
+            from {
+                box-shadow:  0 0 50px magenta;
+                transform: scale(0);
+                opacity: 0.5;
+            }
+            to {
+                box-shadow: 0 0 10px yellow, 0 0 50px magenta;
+                transform: scale(2);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="neon-border"></div>
+</body>
+</html>
